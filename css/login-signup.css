@@ -1,0 +1,258 @@
+/*-------------------------- Common Elements /*--------------------------*/
+/*#region ChromeElements*/
+/*#region Header*/
+
+
+.header {
+    width: 100% !important;
+    height: 45px;
+    background: #212121 !important;
+    color: #ffffff !important;
+    align-self:center;
+    position: fixed !important;
+}
+
+.headerlogo {
+    height: 80%;
+    padding: 4pt;
+    display:block;
+    margin:auto;
+}
+/*#endregion Header*/
+
+/*#region Footer*/
+.footer {
+    height: 45px;
+    background: #212121 !important;
+    color: #ffffff !important;
+    align-self:center;
+    bottom: 0;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+}
+.message {
+    height: 45px;
+    background: #333 !important;
+    color: #ff0000 !important;
+    text-shadow: none !important;
+    align-self: center;
+    bottom: 0;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 1em !important;
+}
+/*#endregion Footer*/
+/*#endregion ChromeElements*/
+
+body {
+    background-color: #f6f6f6 !important;
+    font-family: 'avenir-roman' !important;
+}
+
+.logo {
+    height: 8em;
+    max-width: 21em;
+    display:block;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    margin-top: 8em;
+
+}.ladpic {
+    height: 30em;
+    display:block;
+    margin-bottom: 2em;
+
+}
+
+.ui-footer h1 {
+    font-family: 'avenir-roman' !important;
+    font-weight: 100;
+    font-size: 11pt !important;
+    color: #bcbcbc;
+}
+
+.ui-icon-customback {
+    background: url("../images/buttons/icon-buttons/back_button_25_25.png") !important;
+    background-repeat: no-repeat !important;
+    overflow: auto !important;
+    margin-top: 4pt  !important;
+}
+.error {
+    color:red;
+}
+/*-------------------------- iPhone /*--------------------------*/
+
+/* iPhone x - Portrait */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (orientation : portrait) {
+
+    /*#region content*/
+    .form {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .ui-icon-customback {
+        background: url("../images/buttons/icon-buttons/back_button_25_25.png") !important;
+        background-repeat: no-repeat !important;
+    }
+    /*#endregion content*/
+
+    .ladpic {
+        height: 25em;
+        margin-bottom: 2em;
+
+    }
+
+    .ui-block-b{
+        margin: auto;
+    }
+
+    .top-left {
+        position: absolute;
+        top: 2.5em;
+        left: 85px;
+        text-shadow: none !important;
+        font-size: 45px;
+        color: #ffffff;
+    }
+    .imgContent {
+        position: absolute;
+        top: 10em;
+        left: 35px;
+        text-shadow: none !important;
+        font-size: 18px;
+        color: #ffffff;
+
+    }
+
+    .introIco img {
+        width: 5em;
+        box-shadow: none !important;
+        border-radius: 1em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+    }
+
+    .introIco strong{
+        margin-left: 50px;
+    }
+
+}
+
+
+/* iPhone x - Landscape */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (orientation : landscape) {
+
+    .ladpic {
+        height: 20em;
+        display:block;
+        margin-bottom: 2em;
+
+    }
+
+    .ui-block-b{
+        margin: auto;
+    }
+
+
+}
+
+/*-------------------------- iPad /*--------------------------*/
+
+/* iPad - Landscape */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1600px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 1)  {
+
+    .ui-block-b{
+        margin: auto;
+    }
+
+
+    .ladpic {
+        height: 30em;
+        width: 65em;
+        display:block;
+        margin-bottom: 2em;
+
+    }
+
+    .logo {
+        height: 21em;
+        margin-left:auto;
+        margin-right: auto;
+        margin-bottom: 2em;
+        margin-top: 3em;
+    }
+
+}
+
+/* iPad - Portrait */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+    .ladpic {
+        height: 30em;
+        width: 50em;
+        margin-bottom: 2em;
+
+    }
+
+    .ui-block-b{
+        margin: auto;
+    }
+
+
+    .top-left {
+        position: absolute;
+        top: 1em;
+        left: 85px;
+        text-shadow: none !important;
+        font-size: 65px;
+        color: #ffffff;
+    }
+    .imgContent {
+        position: absolute;
+        top: 6em;
+        left: 95px;
+        text-shadow: none !important;
+        font-size: 28px;
+        color: #ffffff;
+
+    }
+
+    .introIco img {
+        width: 5em;
+        box-shadow: none !important;
+        border-radius: 1em;
+        display: block;
+        margin-left: 10px;
+        margin-right: auto;
+        margin-top: 15px;
+    }
+    #introIcoblock{
+        text-align: center;
+        border: 3px solid #000000;
+        width: 100%;
+    }
+}
+
+
+
+

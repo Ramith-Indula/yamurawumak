@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link href="css/jquery.material.form.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/jquery.material.form.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/form-validation.js"></script>
+    <link rel="stylesheet" href="css/login-signup.css">
+    <link rel="stylesheet" href="css/font-face.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body ng-app="railPaaraApp">
+
+<div data-role="page" id="SignUpPage" ng-controller="registerController">
+    <div data-role="header" class="header">
+        <a href="#loginPage" class="ui-nodisc-icon" data-theme="b" data-role="button" data-icon="customback"
+           data-iconpos="notext"></a>
+        <img src="images/log21.png" class="headerlogo"/></div>
+    <div data-role="main" class="ui-content" id="signupcontent">
+        <div class="ui-grid-b ui-responsive" id="regForm">
+            <div class="ui-block-a" style="text-align: left;"></div>
+            <div class="ui-block-b" style="text-align: center;">
+                <img class="logo" src="images/logos/main_logo.png"/>
+                <input type="email" name="email" id="email" placeholder="Email" ng-model="email">
+                <input type="text" name="username" id="username" placeholder="Full Name" ng-model="name">
+                <input type="password" name="password" id="signuppwrd" placeholder="Password" ng-model="password">
+                <input type="password" name="confirmPassword" id="confirmPwd" placeholder="Re-enter Password" ng-model="confPassword">
+                <input type="image" data-role="button" ng-click="register(email, name, password, confPassword)" src="images/buttons/rectangle-buttons/signup_button.png"
+                       alt="Submit" data-role="submit" style="height: 4em; margin-top: 1em;" id="btnSignUp"></div>
+            <div class="ui-block-c" style="text-align: right;"></div>
+        </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed" class="message" id="message" hidden="hidden">
+
+    </div>
+</div>
+<div data-role="popup" id="errorPopup" class="ui-content" data-overlay-theme="b" data-theme="b">
+    <a href="#" data-rel="back"
+       class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+    <div>
+
+    </div>
+    <input type="email" placeholder="Email" id="favListEmail">
+    <div class="sendBtnDiv">
+        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" id="btnSend">Send</a>
+    </div>
+</div>
+</body>
+</html>

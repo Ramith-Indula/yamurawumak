@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <link rel="stylesheet" href="css/pasttripdetails.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
+    <link rel="stylesheet" href="css/font-face.css">
+    <style>
+        #map-canvas {
+            position: inherit !important;
+            width: 100%;
+            height: 50%;
+        }
+    </style>
+    <script>
+        $(document).on('pageshow', '#past-trip-details-page', function (e, data) {
+            var height = $(window).height();
+            var width = $(window).width();
+            if(height > 1023){
+                $('#map-canvas').height(500);
+            } else if (width > 1024) {
+                $('#map-canvas').height(250);
+            } else {
+                $('#map-canvas').height(200);
+            }
+        });
+
+        $(window).resize(function () {
+            var height = $(window).height();
+            var width = $(window).width();
+            if(height > 1023){
+                $('#map-canvas').height(500);
+            } else if (width > 1024) {
+                $('#map-canvas').height(250);
+            } else {
+                $('#map-canvas').height(200);
+            }
+        });
+
+        function initMap() {
+            var colombomuseumLatlng = {lat: 6.910563, lng: 79.861011};
+
+            var map = new google.maps.Map(document.getElementById('map-canvas'), {
+                zoom: 15,
+                center: colombomuseumLatlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            var markerColomboMuseum = new google.maps.Marker({
+                position: colombomuseumLatlng,
+                map: map,
+                title: 'Colombo Museum',
+                url: '#'
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+<div data-role="page" id="past-trip-details-page" class="ui-responsive-panel">
+
+    <!--Header-->
+    <div data-role="header" class="header" data-position="fixed">
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+            <div id="menubuttonblock">
+                <a href="#menu"><img id="menubutton" src="images/new_icons/_ionicons_svg_md-menu.png"/></a>
+            </div>
+        </div>
+        <div id="logoblock" align="center">
+            <table>
+                <tr>
+                    <td><img src="images/log21.png"/></td>
+                    <td>PAST TRIP DETAILS</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- Slide Menu Panel -->
+    <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true" class="menupanel" style="overflow:auto; position: absolute;">
+        <script>$(function () {
+            $("#menu").load("menu.html");
+        });</script>
+    </div>
+
+    <div data-role="main" class="ui-content" id="content">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                <div class="col-sm-8 col-md-8 col-lg-8">
+                    <h2 style="padding: 0%">A Trip to</h2>
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                <div class="col-sm-8 col-md-8 col-lg-8">
+                    <h1>Galleface Green</h1>
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                <div class="col-sm-8 col-md-8 col-lg-8">
+                    <h3>On the 9th, Dec 2018</h3>
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                <div class="col-sm-8 col-md-8 col-lg-8">
+                    <div id="map-canvas"></div>
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+                <div class="col-xs-5 col-sm-4 col-md-4 col-lg-4">
+                    <h4>Passengers</h4>
+                </div>
+                <div class="col-xs-5 col-sm-4 col-md-4 col-lg-4">
+                    <h4>2 Adults</h4>
+                </div>
+                <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+                <div class="col-xs-5 col-sm-4 col-md-4 col-lg-4">
+                    <h4>Departure</h4>
+                </div>
+                <div class="col-xs-5 col-sm-4 col-md-4 col-lg-4">
+                    <h4>Fort Station</h4>
+                </div>
+                <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+                <div class="col-xs-5 col-sm-4 col-md-4 col-lg-4">
+                    <h4>Dep. Time</h4>
+                </div>
+                <div class="col-xs-5 col-sm-4 col-md-4 col-lg-4">
+                    <h4>11:00am</h4>
+                </div>
+                <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+                <!--<div class="col-xs-5 col-sm-4 col-md-4 col-lg-4">
+                    <h4>Coins Earned</h4>
+                </div>-->
+                <!--<div class="col-xs-5 col-sm-3 col-md-3 col-lg-3">
+                    <span><img class="icon-coin" src="images/icons/coins.png" style="width: 2.5em">100</span>
+                </div>-->
+                <div class="col-xs-1 col-sm-2 col-md-2 col-lg-2"></div>
+            </div>
+            <a id="completebtn" rel="external"  href="challenge-galleface.html" ng-click="login(username, password)"><input type="image" src="images/new_icons/completet%20trip.png" alt="Submit" data-role="submit" style="height: 4em; margin-top: 1em; margin-left: 4em;"></a>
+
+            <!--<div class="rating">
+                <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+            </div>-->
+
+            <div class="email-button-wrapper-back" onclick="history.back(-1)">
+                <img src="images/new_icons/back.png"/></a>
+            </div>
+        </div>
+
+    </div>
+   
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg2nCKZRNaGOA7lEOwInAekGK6Fa-ptgE&callback=initMap">
+           
+    </script>
+
+</div>
+
+
+</body>
+
+</html>

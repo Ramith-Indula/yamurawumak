@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
+    <link rel="stylesheet" href="css/font-face.css">
+    <style>
+        #content {
+            padding: 0 !important;
+        }
+
+        #map-canvas {
+            height: 100%;
+            position: inherit !important;
+        }
+    </style>
+    <script>
+        $(document).on('pageshow', '#homepage', function (e, data) {
+            $('#content').height(getRealContentHeight());
+        });
+
+        function getRealContentHeight() {
+            var header = $.mobile.activePage.find("div[data-role='header']:visible");
+            var footer = $.mobile.activePage.find("div[data-role='footer']:visible");
+            var content = $.mobile.activePage.find("div[data-role='content']:visible:visible");
+            var viewport_height = $(window).height();
+
+            var content_height = viewport_height - header.outerHeight() - footer.outerHeight();
+            if ((content.outerHeight() - header.outerHeight() - footer.outerHeight()) <= viewport_height) {
+                content_height -= (content.outerHeight() - content.height());
+            }
+            return content_height;
+        }
+
+        function initMap() {
+
+
+
+            //Places
+            var gangaramayaLatlng = {lat: 6.916596, lng: 79.856522};
+            var independenceSQLatlng = {lat: 6.9025913, lng: 79.8689593};
+            var dutchMuseumLatlng = {lat: 6.9360393, lng: 79.8494117};
+            var galleFaceLatlng = {lat: 6.9245787, lng: 79.8424376};
+            var colomboMuseumLatlng = {lat: 6.9105611, lng: 79.8587545};
+
+            var map = new google.maps.Map(document.getElementById('map-canvas'), {
+                zoom: 14,
+                center: gangaramayaLatlng,
+                disableDefaultUI: true
+
+            });
+
+
+            var markerGangaramaya = new google.maps.Marker({
+                position: gangaramayaLatlng,
+                map: map,
+                title: 'Gangaramaya Temple',
+                url: 'placefacts.html'
+            });
+
+            var markerIndependenceSQ = new google.maps.Marker({
+                position: independenceSQLatlng,
+                map: map,
+                title: 'Independence Square',
+                url: 'placefacts.html'
+            });
+
+            var markerDutchMuseum = new google.maps.Marker({
+                position: dutchMuseumLatlng,
+                map: map,
+                title: 'Dutch Museum',
+                url: 'placefacts.html'
+            });
+
+            var markerGalleFace = new google.maps.Marker({
+                position: galleFaceLatlng,
+                map: map,
+                title: 'Galle Face',
+                url: 'placefacts.html'
+            });
+
+            var markerColomboMuseum = new google.maps.Marker({
+                position: colomboMuseumLatlng,
+                map: map,
+                title: 'National Museum',
+                url: 'placefacts.html'
+            });
+
+            // Click event listeners
+
+            markerGangaramaya.addListener('click', function () {
+                sessionStorage.setItem('place-Id', "5877a2580f7fea028cf16c21");
+                window.location = markerGangaramaya.url;
+            });
+
+            markerIndependenceSQ.addListener('click', function () {
+                sessionStorage.setItem('place-Id', "5877a2580f7fea028cf16c22");
+                window.location = markerIndependenceSQ.url;
+            });
+
+            markerDutchMuseum.addListener('click', function () {
+                sessionStorage.setItem('place-Id', "5877e28233604b0d8455377a");
+                window.location = markerDutchMuseum.url;
+            });
+
+            markerColomboMuseum.addListener('click', function () {
+                sessionStorage.setItem('place-Id', "5877e28233604b0d8455377b");
+                window.location = markerColomboMuseum.url;
+            });
+
+            markerGalleFace.addListener('click', function () {
+                sessionStorage.setItem('place-Id', "5877e28233604b0d84553779");
+                window.location = markerGalleFace.url;
+            });
+
+        }
+    </script>
+</head>
+<body ng-app="railPaaraApp">
+
+<div data-role="page" id="homepage" class="ui-responsive-panel" ng-controller="logoutController">
+
+    <!--Header-->
+    <div data-role="header" class="header" data-position="fixed">
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+            <div id="menubuttonblock">
+                <a href="#menu"><img id="menubutton" src="images/new_icons/_ionicons_svg_md-menu.png"/></a>
+            </div>
+        </div>
+        <div id="logoblock" align="center">
+            <table>
+                <tr>
+                    <td><img src="images/log21.png"/></td>
+                    <td>HOME</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <div data-role="content" id="content">
+        <div class="search-button-wrapper">
+            <a href="#searchPopup" data-rel="popup" data-position-to="#map-canvas">
+                <img src="images/new_icons/_ionicons_svg_md-search.svg"/>
+            </a>
+        </div>
+        <div id="map-canvas"></div>
+    </div>
+    <!--Search popup-->
+    <div data-role="popup" id="searchPopup" class="ui-content" data-overlay-theme="b">
+
+        <form class="ui-filterable">
+            <input id="filterBasic-input" data-type="search">
+        </form>
+        <div class="ui-grid-b">
+            <div class="ui-block-a"><a href="#" class="ui-shadow ui-btn ui-corner-all ui-mini" id="btnNearby">Nearby</a>
+            </div>
+            <div class="ui-block-b">
+                <div class="button-wrap">
+                    <button class="ui-shadow ui-btn ui-corner-all ui-mini" id="btnRecent">Recent</button>
+                </div>
+            </div>
+            <div class="ui-block-b">
+                <div class="button-wrap">
+                    <button class="ui-shadow ui-btn ui-corner-all ui-mini" id="btnPopular">Popular</button>
+                </div>
+            </div>
+        </div>
+        <ul data-role="listview" data-filter="true" data-input="#filterBasic-input" id="favPlacesLView">
+            <li data-icon="false">
+                <a href="#"><img src="images/places/independence_square/independencesquare_thumbnail_01.png"
+                                 class="place-image">
+                    <h2>Independance Square</h2>
+                    <p class="place-description">Independence Memorial Hall (also Independence Commemoration Hall) is a
+                        national monument in Sri Lanka built for commemoration of the independence of Sri Lanka from the
+                        British rule with the restoration of full governing responsibility[2] to a Ceylonese-elected
+                        legislature on February 4, 1948. It is located at the Independence Square (formerly Torrington
+                        Square) in the Cinnamon Gardens, Colombo. It also houses the Independence Memorial Museum.</p>
+                </a>
+            </li>
+            <li data-icon="false">
+                <a href="#"><img src="images/places/colombo_museum/colombomuseum_thumbnail_01.png" class="place-image">
+                    <h2>Colombo Museum </h2>
+                    <p class="place-description">National Museum of Colombo, also known as the Sri Lanka National Museum
+                        is one of two museums in Colombo. It is the largest museum in Sri Lanka. It is maintained by the
+                        Department of National Museum of the central government. The museum holds contains a collections
+                        of much importance to Sri Lanka such as the regalia of the country, including the throne and
+                        crown of the Kandyan monarchs as well as many other exhibits telling the story of ancient Sri
+                        Lanka.</p>
+
+                </a>
+            </li>
+            <li data-icon="false">
+                <a href="placefacts-gangaramaya.html" rel="external"><img
+                        src="images/places/gangaramaya/gangaramaya_thumbnail_01.png" class="place-image">
+                    <h2>Gangaramaya</h2>
+                    <p class="place-description">The Gangaramaya Buddhist temple is a beautiful and vibrant temple with
+                        a history that dates back over 2,000 years. This temple was said to have been built in the 19th
+                        century by a trader and ship owner named Don Bastion, who had played a leading role in reviving
+                        Buddhism</p>
+
+                </a>
+            </li>
+            <li data-icon="false">
+                <a href="#"><img src="images/places/gallefacegreen/gallefacegreen_thumbnail_01.png" class="place-image">
+                    <h2>Galle face Green</h2>
+                    <p class="place-description">The Galle Face is a five hectare ocean-side urban park, which stretches
+                        for a half kilometre along the coast, in the heart of the financial and business district of
+                        Colombo, Sri Lanka. The promenade was initially laid out in 1859 by Governor Sir Henry George
+                        Ward, although the original Galle Face Green extended over a much larger area than is seen
+                        today. The Galle Face Green was initially used for horse racing and as a golf course, but was
+                        also used for cricket, polo, football, tennis and rugby.</p>
+                </a>
+            </li>
+
+            <li data-icon="false">
+                <a href="#"><img src="images/places/dutch_museum/dutchmuseum_thumbnail_01.png" class="place-image">
+                    <h2>Dutch Museum</h2>
+                    <p class="place-description">Pettah. It's the oldest, most interesting and perhaps most underrated
+                        (at least by Southern Colombars) part of the city. Whatever the more sheltered denizens of
+                        Colombo-South may think this teaming, multi-ethnic-warren remains the beating heart of the
+                        capital. Almost all the food we buy, a good proportion of the white goods/electronics we use and
+                        virtually all the piping, wiring, nuts, bolts and nails that hold together our homes, as well as
+                        every sock, hanky and hair clip you've ever bought passes through Pettah's complex
+                        wholesale/retail ecosystem at some point. </p>
+
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- Slide Menu Panel -->
+    <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true" class="menupanel" style="overflow:auto; position: absolute;">
+        <script>$(function () {
+            $("#menu").load("menu.html");
+        });</script>
+    </div>
+
+
+    <!--Footer-->
+    <!--<div data-role="footer" data-position="fixed" class="footer">
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+            <div id="backbuttonblock">
+                <a href=""><img id="backbutton" ng-click="logout()" src="images/buttons/icon-buttons/back_button.png"/></a>
+            </div>
+        </div>
+    </div>-->
+
+</div>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg2nCKZRNaGOA7lEOwInAekGK6Fa-ptgE&callback=initMap">
+</script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <link rel="stylesheet" href="css/personaldetails.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
+    <link rel="stylesheet" href="css/font-face.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+
+<div data-role="page" id="templatepage" class="ui-responsive-panel">
+
+     <!--Header-->
+     <div data-role="header" class="header" data-position="fixed">
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+            <div id="menubuttonblock">
+                <a href="#menu"><img id="menubutton" src="images/new_icons/_ionicons_svg_md-menu.png"/></a>
+            </div>
+        </div>
+        <div id="logoblock" align="center">
+            <table>
+                <tr>
+                    <td><img src="images/log21.png"/></td>
+                    <td>Personal Details</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- Slide Menu Panel -->
+    <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true"
+         class="menupanel">
+        <script>$(function(){$("#menu").load("menu.html");});</script>
+    </div>
+
+    <div data-role="main" class="ui-content" id="content">
+
+        <div class="form-section">
+
+            <div class="grav-wrapper">
+                <div class="pro-pic">
+                    <img id="profile-img" src="images/test_data/profile_dp.png">
+                </div>
+                <span class="camera-icon"><i class="fa fa-camera" aria-hidden="true"></i></span>
+            </div>
+            <div class="personal-details">
+                <h1>Melissa Diaz<span class="edit-icon-wrapper"><i class="fa fa-pencil-square-o"
+                                                                   aria-hidden="true"></i></span></h1>
+                <p>melissa@example.com</p>
+            </div>
+            <div class="form-wrapper">
+                <div>
+                    <input type="password" placeholder="old password">
+                </div>
+                <div>
+                    <input type="password" placeholder="new password">
+                </div>
+                <div>
+                    <input type="password" placeholder="repeat new password">
+                </div>
+                <div>
+                    <input type="email" placeholder="email">
+                </div>
+                <div class="save-btn-wrapper">
+                    <input id="btnSave" type="image" data-role="button" src="images/buttons/rectangle-buttons/save_button.png"
+                           alt="Submit" data-role="submit" style="height: 80px; width: 172px;">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+   
+
+</div>
+
+<script>
+    $("#btnSave").on("click", function(){
+        $("#footer").hide();
+        $("#message").html(" Password Changed <img class='tickImg' src='images/icons/check_green_icon.png'>");
+        $("#message").show();
+
+        setTimeout(function(){
+            $("#message").hide();
+            $("#footer").show();
+        }, 2000);
+    });
+
+</script>
+
+</div>
+
+</body>
+</html>

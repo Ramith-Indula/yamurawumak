@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <link rel="stylesheet" href="css/aboutUs.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
+    <link rel="stylesheet" href="css/font-face.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body ng-app="railPaaraApp">
+<div data-role="page" id="aboutusPage" class="ui-responsive-panel">
+
+    <!--Header-->
+    <div data-role="header" class="header" data-position="fixed">
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+            <div id="menubuttonblock">
+
+                <a href="#menu"><img id="menubutton" src="images/new_icons/_ionicons_svg_md-menu.png" /></a>
+            </div>
+        </div>
+        <div id="logoblock" align="center">
+            <table>
+                <tr>
+                    <td><img src="images/log21.png"/></td>
+                    <td>ABOUT US</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Slide Menu Panel -->
+    <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true" class="menupanel" style="overflow:auto; position: absolute;">
+        <script>$(function () {
+            $("#menu").load("menu.html");
+        });</script>
+    </div>
+
+    <!--Content-->
+
+
+
+        <div id="about-wrapper" class="ui-grid-a"  >
+
+
+           <!-- <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+            <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
+        </div>--><!-- /grid-a -->
+        <!-- /grid-a -->
+            <!--style="width: 25em; margin-left: 25px"-->
+            <div class="ui-block-a"  style="width: 9em; margin-top: 25px"><img src="images/team/Pasindu.png"></div>
+            <div class="ui-block-b" style="width: 20em" >
+                <h3>Developer</h3>
+                <p>Pasindu Purna is a professional developer for YamuRawumak Application. Who is very enthusiastic and
+                    hard worker from Kosgoda area.</p>
+                <hr>
+            </div>
+            <div class="ui-block-a"  style="width: 9em; margin-top: 25px"><img src="images/team/Thilan.jpg"></div>
+            <div class="ui-block-b" style="width: 20em" >
+                <h3>Developer</h3>
+                <p>Thilan Lasitha is a Developer of the Yamu Rawumak Application. who is performs back end
+                    of the application.</p>
+                <hr>
+            </div>
+            <div class="ui-block-a"  style="width: 9em; margin-top: 25px"><img src="images/team/tharaka.png"></div>
+            <div class="ui-block-b" style="width: 20em" >
+                <h3>Developer</h3>
+                <p>Tharaka Rathnasekara is a professional developer who is developing core
+                    computational logic of the application.</p>
+                <hr>
+            </div>
+
+            <div class="ui-block-a"  style="width: 9em; margin-top: 25px"><img src="images/team/Ramith.png"></div>
+            <div class="ui-block-b" style="width: 20em" >
+                <h3>Developer</h3>
+                <p>Ramith Indula is a optimistic and hardworking developer for YamuRawumak Application. who
+                    is developing core application logic, databases and application integration.</p>
+                <hr>
+            </div>
+
+
+
+        </div>
+    <div data-role="footer" data-position="fixed" class="footer">
+        <h1>©YAMUරවුමක්</h1>
+    </div>
+</div>
+</body>
+</html>

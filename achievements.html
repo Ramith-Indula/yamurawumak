@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <link rel="stylesheet" href="css/achievements.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
+    <link rel="stylesheet" href="css/font-face.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+
+    <div data-role="page" id="achievementsPage" class="ui-responsive-panel">
+
+        <!--Header-->
+        <div data-role="header" class="header" data-position="fixed">
+            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+                <div id="menubuttonblock">
+                    
+                    <a href="#menu"><img id="menubutton" src="images/new_icons/_ionicons_svg_md-menu.png" /></a>
+                </div>
+            </div>
+            <div id="logoblock" align="center">
+                    <table>
+                        <tr>
+                            <td><img src="images/log21.png"/></td>
+                            <td>ACHIEVEMENT</td>
+                        </tr>
+                    </table>
+                </div>
+        </div>
+
+        <!-- Slide Menu Panel -->
+        <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true" class="menupanel" style="overflow:auto; position: absolute;">
+            <script>$(function () {
+                    $("#menu").load("menu.html");
+                });</script>
+</div>
+
+<div data-role="main" class="ui-content" id="content">
+
+    <div class="profile-wrapper row">
+        <div class=" profile col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+            <div class="col-md-6 col-sx-6">
+                <div class="pro-pic">
+                    <img id="profile-img" src="images/icons/maleavatarthumb.png">
+                </div>
+            </div>
+            <div class="col-md-6 col-sx-6">
+                <div class="row">
+                    <span><h1 id="profile-name"> Tharaka <br> Rathanasekara </h1></span>
+                </div>
+
+                <div class="row">
+                    <span class="row">
+                            <a href="#" class="url-button btn btn-primary btn-xs">
+                                <span class="glyphicon glyphicon-cog"></span> Edit Personal Details</a>
+                    </span>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-6">
+                        <span><h4>1500 <br> Coins</h4></span>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <span><h4>12 <br> Trips</h4></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="achievement row list-group-item">
+            <h4 class="achievement-header list-group-item-heading">Gangaramaya Temple</h4>
+            <p class="achievement-type list-group-item-text">Picture Puzzle Challenge</p>
+            <div class="row achievement-meta">
+                <div class="col-md-4">
+                    <span>04-06-2016</span>
+                </div>
+                <div class="col-md-4">
+                    <span>76 Moves</span>
+                </div>
+                <div class="col-md-2">
+                    <span><img class="icon-coin" src="images/new_icons/dollor_coin_black.jpg">100</span>
+                </div>
+                <div class="col-md-2">
+                    <span><img class="icon-tick" src="images/new_icons/_ionicons_svg_ios-checkbox.svg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="achievement row list-group-item">
+            <h4 class="achievement-header list-group-item-heading">Colombo Museum</h4>
+            <p class="achievement-type list-group-item-text">Crossword Challenge</p>
+            <div class="row achievement-meta">
+                <div class="col-md-4">
+                    <span>04-06-2016</span>
+                </div>
+                <div class="col-md-4">
+                    <span>76 Moves</span>
+                </div>
+                <div class="col-md-2">
+                    <span><img class="icon-coin" src="images/new_icons/dollor_coin_black.jpg">100</span>
+                </div>
+                <div class="col-md-2">
+                    <span><img class="icon-tick" src="images/new_icons/_ionicons_svg_ios-checkbox.svg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="achievement row list-group-item">
+            <h4 class="achievement-header list-group-item-heading">Independence Square</h4>
+            <p class="achievement-type list-group-item-text">Trivia Challenge</p>
+            <div class="row achievement-meta">
+                <div class="col-md-4">
+                    <span>04-06-2016</span>
+                </div>
+                <div class="col-md-4">
+                    <span>76 Moves</span>
+                </div>
+                <div class="col-md-2">
+                    <span><img class="icon-coin" src="images/new_icons/dollor_coin_black.jpg">100</span>
+                </div>
+                <div class="col-md-2">
+                    <span><img class="icon-tick" src="images/new_icons/_ionicons_svg_ios-checkbox.svg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!--Footer-->
+<!-- <div data-role="footer" data-position="fixed" class="footer">
+    <h1>©Railපාර 2016</h1>
+</div> -->
+
+</div>
+
+</body>
+
+</html>

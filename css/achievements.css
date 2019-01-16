@@ -1,0 +1,252 @@
+/*-------------------------- Common Elements /*--------------------------*/
+/*#region ChromeElements*/
+/*#region Header*/
+.header {
+    width: 100% !important;
+    height: 45px !important;
+    background: #414042 !important;
+    color: #ffffff !important;
+    align-self: center !important;
+    position: fixed !important;
+}
+
+#headerblock {
+    display: inline-block !important;
+    width: 100%;
+    height: 45px;
+}
+
+/*#region Logo*/
+#logoblock {
+    margin-top: 1%;
+}
+#logoblock td {
+    font-family: 'avenir-roman' !important;
+    font-weight: 100;
+    font-size: 11pt !important;
+    color: #ffffff;
+    text-shadow: 0px 0px;
+}
+#logoblock img {
+    margin-top: 10%;
+    display: block;
+    margin: auto;
+    height: 2.4em;
+}
+/*#endregion Logo*/
+/*#endregion Header*/
+
+.ui-content {
+    border-width: 0;
+    overflow: visible;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/** Personal Details **/
+.profile-wrapper {
+    border: 1px solid;
+    background-color: #f9f9f9;
+    border-color: #bbb;
+    padding: 1em ;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 2em;
+}
+
+.profile {
+    display: inline-flex;
+}
+
+#profile-img {
+    width: 144px;
+}
+
+
+#profile-name {
+    margin-top: 0;
+    font-size: 26px !important;
+}
+
+.personal-details {
+    position: relative;
+    display: inline-block;
+}
+.pro-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    border: 3px solid #e2e2e2;
+    padding: 0;
+    margin-left: -2.2em;
+}
+
+.user-fname {
+    position: absolute;
+    top: -15px;
+    right: -150px
+}
+.user-fname h1 {
+    position: relative;
+    display: inline-block;
+}
+
+.edit-profile {
+    position: absolute;
+    top: 85px;
+    right: -159px;
+}
+.edit-profile .btn-primary {
+    color: #fff;
+    background-color: #424242;
+    border-color: #333;
+    text-shadow: none
+}
+
+
+.url-button {
+    background-color: #757575;
+    border-color: #555555;
+    color: #fafafa !important;
+    text-shadow: none;
+}
+
+a:visited {
+    color: #fafafa;
+    background-color: #757575 !important;
+}
+
+.achievement {
+    box-shadow: 3px 5px 10px #888888;
+    background-color: #f9f9f9;
+    border-color: #bbb;
+    padding: 1em ;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+    color: #757575; 
+}
+
+.achievement-header {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.achievement-type {
+    font-size: 17px;
+}
+
+.achievement-meta{
+        font-size: 15px;
+        margin-top: 1em;
+}
+
+.icon-coin {
+    width: 25px;
+    height: 25px;
+}
+
+.icon-tick {
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-top: -1.5em;
+}
+
+
+/*#region Footer*/
+/* .footer {
+    height: 45px;
+    background: #ff3d00 !important;
+    color: #ffffff !important;
+    align-self: center;
+    bottom: 0;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+} */
+
+/*Footer Text*/
+/* .ui-footer h1 {
+    font-family: 'avenir-roman' !important;
+    font-weight: 100;
+    font-size: 11pt !important;
+    color: #bcbcbc;
+} */
+/*#endregion Footer*/
+
+body {
+    background-color: #f6f6f6 !important;
+    font-family: 'avenir-roman' !important;
+}
+
+/*-------------------------- iPhone /*--------------------------*/
+
+/* iPhone x - Portrait */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (orientation: portrait) {
+
+    .achievement-meta{
+        display: inline-flex;
+        width: 100%;
+    }
+
+    .icon-tick {
+    margin-top: -0.7em;
+    margin-right: -2em;
+}
+}
+
+/* iPhone x - Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (orientation: landscape) {
+
+}
+
+/*-------------------------- iPad /*--------------------------*/
+
+/* iPad - Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+    #logoblock {
+        margin-right: 18em;
+        margin-top: 0.5%;
+    }
+
+    .ui-controlgroup-horizontal .ui-controlgroup-controls {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 22em !important;
+    }
+
+    .ui-content {
+        padding: 3em;
+    }
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* iPad - Portrait */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait) {
+
+}

@@ -1,0 +1,32 @@
+/*#region Fonts*/
+@font-face {
+    font-family: 'roboto-regular';
+    src: url('../fonts/roboto/roboto-regular-webfont.eot');
+    src: url('../fonts/roboto/roboto-regular-webfont.eot');
+    src: url('../fonts/roboto/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto/roboto-regular-webfont.woff') format('woff'),
+         url('../fonts/roboto/roboto-regular-webfont.ttf') format('truetype'),
+         url('../fonts/roboto/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'avenir-light';
+    src: url('../fonts/avenir/avenir-light.eot');
+    src: url('../fonts/avenir/avenir-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/avenir/avenir-light.woff') format('woff'),
+         url('../fonts/avenir/avenir-light.ttf') format('truetype'),
+         url('../fonts/avenir/avenir-light.svg#avenirregular') format('svg');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'avenir-roman';
+    src: url('../fonts/avenir/avenir-roman.eot');
+    src: url('../fonts/avenir/avenir-roman.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/avenir/avenir-roman.woff') format('woff'),
+         url('../fonts/avenir/avenir-roman.ttf') format('truetype'),
+         url('../fonts/avenir/avenir-roman.svg#avenirregular') format('svg');
+    font-style: normal;
+}
+/*#endregion Fonts*/

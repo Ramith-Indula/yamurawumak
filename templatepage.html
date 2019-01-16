@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <link rel="stylesheet" href="css/templatepage.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
+    <link rel="stylesheet" href="css/font-face.css">
+</head>
+<body>
+
+    <div data-role="page" id="templatepage" class="ui-responsive-panel">
+
+        <!--Header-->
+        <div data-role="header" class="header" data-position="fixed">
+            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+                <div id="menubuttonblock">
+                    <a href="#menu"><img id="menubutton" src="images/buttons/icon-buttons/menu_button.png"/></a>
+                </div>
+            </div>
+            <div id="logoblock">
+                <img src="images/logos/header/home_header_logo.png"/>
+            </div>
+            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right" data-mini="true">
+                <div id="backbuttonblock">
+                    <a href=""><img id="backbutton" src="images/buttons/icon-buttons/back_button.png"/></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide Menu Panel -->
+        <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true"
+             class="menupanel">
+            <script>$(function(){$("#menu").load("menu.html");});</script>
+        </div>
+
+        <div data-role="main" class="ui-content" id="content">
+             <!--Content goes here-->
+        </div>
+
+    </div>
+
+</body>
+</html>

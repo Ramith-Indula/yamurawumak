@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/crossword.js"></script>
+    <link rel="stylesheet" href="css/challenge-galleface.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
+    <link rel="stylesheet" href="css/font-face.css">
+    <link rel="stylesheet" href="css/puzzle.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div data-role="page" id="templatepage" class="ui-responsive-panel">
+
+    <!--Header-->
+    <div data-role="header" class="header" data-position="fixed">
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+            <div id="menubuttonblock">
+                <a href="#menu"><img id="menubutton" src="images/new_icons/_ionicons_svg_md-menu.png" /></a>
+            </div>
+        </div>
+        <div id="logoblock" align="center">
+            <table>
+                <tr>
+                    <td><img src="images/log21.png"/></td>
+                    <td style="font-family: Raleway !important;">GALLFACE GREEN CHALLENGE</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+    <!-- Slide Menu Panel -->
+    <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true" class="menupanel">
+        <script>$(function () { $("#menu").load("menu.html"); });</script>
+    </div>
+
+    <div data-role="main" class="ui-content" id="content">
+        <div id="challenge-title">
+            <h3>Know the facts!</h3>
+        </div>
+        <div id="challenge-content">
+            <div id="puzzle_container">
+                <table id="puzzle">
+                </table>
+            </div>
+        </div>
+        <div id="cw-clues">
+            <div id="hints_container">
+                <h3>Vertical</h3>
+                <div id="vertical_hints_container"></div>
+                <h3>Horizontal</h3>
+                <div id="horizontal_hints_container"></div>
+            </div>
+        </div>
+        <div id="buttons_container">
+            <button id="solve">Solve</button>
+            <button id="clear_all">Clear All</button>
+        </div>
+    </div>
+
+  <!--  <div data-role="popup" id="startPopup" class="ui-content" data-overlay-theme="b" data-theme="b" data-position-to="#content">
+        <a href="#" data-rel="back"
+           class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+        <h3 style="text-align: center">Test your Knowledge!</h3>
+        <p style="text-align: center">Welcome to the Colombo Museum crossword challenge! <br>It's all about your knowledge about the Colombo Museum.<br>What you have to do is simple. <br> Use the hints to fill in the blanks. Good luck!</p>
+        &lt;!&ndash;<div class="start-popup-image"><img class="start-popup-image" src="images/icons/puzzle_sample.png"></div>&ndash;&gt;
+        <div id="play-button-div">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" >Play and Win <img id="play-button-image" src="images/icons/100_coins.png"></a>
+        </div>
+    </div>-->
+
+</div>
+</body>
+
+<script>
+    $(document).on('pageinit', '.ui-page',function(event){
+        setTimeout(function () {
+            $('#startPopup').popup('open');
+        }, 1000);
+    });
+</script>
+</html>

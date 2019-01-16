@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <link rel="stylesheet" href="css/bookatrip.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
+    <link rel="stylesheet" href="css/font-face.css">
+</head>
+<body>
+
+<div data-role="page" id="templatepage" class="ui-responsive-panel">
+
+    <!--Header-->
+    <div data-role="header" class="header" data-position="fixed">
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+            <div id="menubuttonblock">
+                <a href="#menu"><img id="menubutton" src="images/new_icons/_ionicons_svg_md-menu.png"/></a>
+            </div>
+        </div>
+        <div id="logoblock" align="center">
+            <table>
+                <tr>
+                    <td><img src="images/log21.png"/></td>
+                    <td>Booking a Trip</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- Slide Menu Panel -->
+    <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true"
+         class="menupanel">
+        <script>$(function(){$("#menu").load("menu.html");});</script>
+    </div>
+
+    <div data-role="main" class="ui-content" id="content">
+
+        <div class="container">
+            <div class="depatureDetails">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1><B>Booking Details</B></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h3><B>Depature Station</B></h3>
+                    </div>
+                    <div class="col-xs-6">
+                        <h3>Maradana, Colombo 10</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h3><B>Departure Time and Date</B></h3>
+                    </div>
+                    <div class="col-xs-6">
+                        <h3>2017-02-10 12:00</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h3><B>Number of seats</B></h3>
+                    </div>
+                    <div class="col-xs-6">
+                        <h3>3</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h3><B>Cabin Type</B></h3>
+                    </div>
+                    <div class="col-xs-6">
+                        <h3>1st Class</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Window seat required</h3>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="arrivalDetails">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1><B>Return Trip Details</B></h1>
+                    </div>
+                    <div class="col-xs-6">
+                        <h3>Depature Station</h3>
+                    </div>
+                    <div class="col-xs-6">
+                        <h3>Maradana, Colombo 10</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h3>Departure Time and Date</h3>
+                    </div>
+                    <div class="col-xs-6">
+                        <h3>2017-02-03 04:00</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h3>Number of seats</h3>
+                    </div>
+                    <div class="col-xs-6">
+                        <h3>3</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <h3>Cabin Type</h3>
+                    </div>
+                    <div class="col-xs-6">
+                        <h3>1st Class</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Window seat required</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: inline-block; width: 100%; padding-top: 5%">
+                <a rel="external" href="bookatrip.html" class="url-button btn btn-primary" id="editBtn">Edit Details</a>
+                <a rel="external" href="confirmpayment.html" class="url-button btn btn-primary" id="nextBtn">Next</a>
+            </div>
+        </div>
+    </div>
+
+    
+
+</div>
+
+</body>
+</html>

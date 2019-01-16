@@ -1,0 +1,533 @@
+/*-------------------------- Common Elements /*--------------------------*/
+/*#region ChromeElements*/
+/*#region Header*/
+.header {
+    width: 100% !important;
+    height: 45px !important;
+    background: #424242 !important;
+    color: #ffffff !important;
+    align-self: center !important;
+    position: fixed !important;
+    text-shadow: none !important;
+    font-weight: unset !important;
+}
+
+#headerblock {
+    display: inline-block !important;
+    width: 100%;
+    height: 45px;
+}
+
+/*#region Logo*/
+
+#logoblock img {
+    margin-top: 10%;
+    display: block;
+    margin: auto;
+    height: 2.4em;
+}
+
+/*#endregion Logo*/
+/*#endregion Header*/
+
+
+.favplace {
+    box-shadow: 3px 5px 10px #888888;
+    background-color: #f9f9f9;
+    border-color: #bbb;
+    padding: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 0.5em;
+    color: #757575;
+
+}
+
+.favplace-header {
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: none;
+}
+
+.favplace-desc {
+    font-size: 1.6em;
+    text-align: justify;
+    margin-right: 1.2em;
+}
+
+.favplace-content {
+    max-height: 140px;
+    overflow: hidden;
+}
+
+.place-image {
+    width: 150px;
+}
+
+.del-div {
+    float: right;
+    margin-top: -1.6em;
+}
+
+.del-button {
+    width: 30px !important;
+}
+
+.content-wrapper {
+    overflow: scroll;
+}
+
+/*.email-button-wrapper-back {
+    position: fixed;
+    z-index: 2500;
+    bottom: 0;
+    right: 0;
+
+}
+.email-button-wrapper  {
+    position: fixed;
+    z-index: 2500;
+    bottom: 0;
+    right: 0;
+}
+
+.email-button-wrapper img {
+     width: 5em;
+     box-shadow: 3px 5px 10px #888888;
+     border-radius: 10em;
+     margin-right: 1em;
+     display: block;
+     margin-bottom: 4em;
+     float: right;
+ }
+.email-button-wrapper-back img {
+     width: 5em;
+     box-shadow: 3px 5px 10px #888888;
+     border-radius: 10em;
+     margin-right: 25em;
+     display: block;
+     margin-bottom: 4em;
+     float: right;
+ }*/
+
+
+.popupDeleteBtn {
+    background-color: transparent !important;
+    border: none;
+    margin-right: -1em !important;
+    margin-bottom: -1em !important;
+
+}
+
+#myPopup {
+    background-color: #333 !important;
+    color: #ffffff !important;
+    opacity: 0.9;
+    border: none !important;
+}
+
+#emailPopup {
+    background-color: #333 !important;
+    color: #000000 !important;
+    opacity: 0.9;
+    border: none !important;
+}
+
+#favListEmail {
+    background-color: #333 !important;
+    opacity: 0.9;
+    border-color: #333330 !important;
+}
+
+#btnSend {
+    margin: 0 auto;
+}
+
+.message {
+    height: 45px;
+    background: #333 !important;
+    color: #ffffff !important;
+    align-self: center;
+    bottom: 0;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 1em !important;
+    text-shadow: none !important;
+}
+
+.tickImg {
+    height: 2em;
+}
+
+/*#region Footer*/
+.footer {
+    height: 45px;
+    background: #ffb300 !important;
+    color: #ffffff !important;
+    align-self: center;
+    bottom: 0;
+    position: fixed;
+    margin: 0;
+    width: 100%;
+}
+
+/*Footer Text*/
+.ui-footer h1 {
+    font-family: 'avenir-roman' !important;
+    font-weight: 100;
+    font-size: 11pt !important;
+    color: #ffffff;
+}
+
+/*#endregion Footer*/
+
+body {
+    background-color: #f6f6f6 !important;
+    font-family: 'avenir-roman' !important;
+}
+
+
+/*-------------------------- PC/Mac /*--------------------------*/
+
+@media only screen
+and (min-device-width: 1025px) {
+
+    .favplace {
+        width: 1200px;
+        margin: 0 auto;
+        margin-bottom: 25px !important;
+    }
+
+    .email-button-wrapper-back {
+        position: relative;
+        z-index: 1100;
+        bottom: 0;
+        right: 0;
+
+    }
+
+    .email-button-wrapper {
+        position: fixed;
+        z-index: 1100;
+        bottom: 0;
+        right: 0;
+    }
+
+    .email-button-wrapper img {
+        width: 3em;
+        box-shadow: 3px 5px 10px #888888;
+        border-radius: 10em;
+        margin-right: 1em;
+        display: block;
+        margin-bottom: 4em;
+        float: right;
+    }
+
+    .email-button-wrapper-back img {
+        width: 3em;
+        box-shadow: 3px 5px 10px #888888;
+        border-radius: 10em;
+        margin-right: 85em;
+        display: block;
+        margin-bottom: 4em;
+        float: right;
+    }
+
+}
+
+
+/*-------------------------- iPhone /*--------------------------*/
+
+/* iPhone X - Portrait */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (orientation: portrait) {
+
+    .place-image {
+        width: 100px;
+    }
+
+    .favplace-content {
+        max-height: 100px;
+        overflow: hidden;
+    }
+
+    .favplace-desc {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .del-button {
+        width: 20px !important;
+    }
+
+    .favplace {
+        margin-left: 0em;
+        margin-right: 0em;
+    }
+
+
+    .email-button-wrapper-back img {
+        width: 3em;
+        box-shadow: 3px 5px 10px #888888;
+        border-radius: 10em;
+        margin-right: 25em;
+        display: block;
+        margin-bottom: 4em;
+        float: right;
+    }
+
+    .email-button-wrapper-back {
+        position: fixed;
+        z-index: 1100;
+        bottom: 0;
+        right: 0;
+
+    }
+
+    #qrimg {
+        width: 25em;
+        box-shadow: none !important;
+        border-radius: 1em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+    }
+
+    .qr hr {
+        display: block;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-left: 2em;
+        margin-right: 2em;
+        border-style: solid;
+        border-width: 1px;
+    }
+
+    #scanbtn {
+        margin-left: 90px;
+        height: 4em;
+        margin-top: 3em;
+
+    }
+
+
+}
+
+/* iPhone X - Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (orientation: landscape) {
+
+    .place-image {
+        width: 100px;
+    }
+
+    .favplace-content {
+        max-height: 100px;
+        overflow: hidden;
+    }
+
+    .favplace-desc {
+        font-size: 1em;
+        text-align: left;
+        margin-right: 0.6em;
+
+
+    }
+
+    .del-button {
+        width: 20px !important;
+    }
+
+    .favplace {
+        margin-left: 0em;
+        margin-right: 0em;
+    }
+
+
+    .email-button-wrapper {
+        position: fixed;
+        z-index: 2500;
+        bottom: 0;
+        right: 0;
+    }
+
+
+    .email-button-wrapper-back {
+        position: fixed;
+        z-index: 1100;
+        bottom: 0;
+        right: 0;
+
+    }
+
+    .email-button-wrapper img {
+        width: 3em;
+        box-shadow: 3px 5px 10px #888888;
+        border-radius: 10em;
+        margin-right: 1em;
+        display: block;
+        margin-bottom: 4em;
+        float: right;
+    }
+
+    .email-button-wrapper-back img {
+        width: 3em;
+        box-shadow: 3px 5px 10px #888888;
+        border-radius: 1em;
+        margin-right: 21em;
+        display: block;
+        margin-bottom: 4em;
+        float: right;
+    }
+
+
+}
+
+/*-------------------------- iPad /*--------------------------*/
+
+/* iPad - Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+    #logoblock {
+        margin-right: 18em;
+        margin-top: 0.5%;
+    }
+
+    .favplace {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    .ui-controlgroup-horizontal .ui-controlgroup-controls {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 22em !important;
+    }
+
+    .email-button-wrapper {
+        position: fixed;
+        z-index: 2500;
+        bottom: 0;
+        right: 0;
+    }
+
+    .email-button-wrapper-back {
+        position: fixed;
+        z-index: 2500;
+        bottom: 0;
+        right: 0;
+
+    }
+
+    .email-button-wrapper img {
+        width: 5em;
+        box-shadow: 3px 5px 10px #888888;
+        border-radius: 10em;
+        margin-right: 1em;
+        display: block;
+        margin-bottom: 4em;
+        float: right;
+    }
+
+    .email-button-wrapper-back img {
+        width: 5em;
+        box-shadow: 3px 5px 10px #888888;
+        border-radius: 10em;
+        margin-right: 21em;
+        display: block;
+        margin-bottom: 4em;
+        float: right;
+    }
+
+}
+
+/* iPad - Portrait */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait) {
+
+    .qr img {
+        width: 35em;
+        box-shadow: none !important;
+        border-radius: 1em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+    }
+
+    .qr hr {
+        display: block;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-left: 2em;
+        margin-right: 2em;
+        border-style: solid;
+        border-width: 1px;
+    }
+
+    .email-button-wrapper {
+        position: fixed;
+        z-index: 2500;
+        bottom: 0;
+        right: 0;
+    }
+
+    .qr p {
+        text-align: center;
+        font-size: 28px;
+        margin-top: 1em;
+
+
+    }
+
+    #scanbtn {
+        margin-left: 250px;
+        height: 4em;
+        margin-top: 5em;
+
+    }
+
+
+
+    .email-button-wrapper img {
+        width: 5em;
+        box-shadow: 3px 5px 10px #888888;
+        border-radius: 10em;
+        margin-right: 1em;
+        display: block;
+        margin-bottom: 4em;
+        float: right;
+    }
+
+    .email-button-wrapper-back img {
+        width: 5em;
+        box-shadow: 3px 5px 10px #888888;
+        border-radius: 10em;
+        margin-right: 49em;
+        display: block;
+        margin-bottom: 4em;
+        float: right;
+    }
+
+    .email-button-wrapper-back {
+        position: fixed;
+        z-index: 1100;
+        bottom: 0;
+        right: 0;
+
+    }
+
+}

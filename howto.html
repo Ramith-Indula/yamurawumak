@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <link rel="stylesheet" href="css/howto.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
+    <link rel="stylesheet" href="css/font-face.css">
+</head>
+<body>
+<div data-role="page" id="howtopage" class="ui-responsive-panel">
+    <!-- <div data-role="header" class="header" data-position="fixed">
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+            <div id="menubuttonblock">
+                <a href="#menu"><img id="menubutton" src="images/buttons/icon-buttons/menu_button.png"/></a>
+            </div>
+        </div>
+        <div id="logoblock">
+            <img src="images/logos/header/howto_he"/>
+        </div>
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right" data-mini="true">
+            <div id="backbuttonblock">
+                <a href=""><img id="backbutton" src="images/buttons/icon-buttons/back_button.png"/></a>
+            </div>
+        </div>
+    </div> -->
+
+    <!--Header-->
+    <div data-role="header" class="header" data-position="fixed">
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+            <div id="menubuttonblock">
+                <a href="#menu"><img id="menubutton" src="images/new_icons/_ionicons_svg_md-menu.png"/></a>
+            </div>
+        </div>
+        <div id="logoblock" align="center">
+            <table>
+                <tr>
+                    <td><img src="images/log21.png"/></td>
+                    <td>HOW TO</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+    <!-- Slide Menu Panel -->
+    <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true" class="menupanel" style="overflow:auto; position: absolute;">
+        <script>$(function(){$("#menu").load("menu.html");});</script>
+    </div>
+
+    <div data-role="main" class="ui-content" id="content">
+        <!--Content goes here-->
+
+<div style="margin: 0 auto;">
+    <embed src="http://www.youtube.com/v/I7Cc-8MTXO8" class="videoBlock">
+</div>
+
+        <div id="howtocontent">
+<h2> Get Satrted with YAMUරවුමක්</h2>
+            <p>Start by exploring interesting places nearby. All the places you can reach within a short
+time will be shown on the home screen based on your location.simply tap on the search 
+icon or any place you want explore. you can add add places to your favourites 
+or get email those places into your email account. You can eran points by simply clicking
+trips when you reach the location. For futher more details you can watch the above video and simply get to 
+know YAMUරවුමක් application.</p>
+        </div>
+    </div>
+    <!-- Footer
+    <div data-role="footer" data-position="fixed" class="footer">
+        <h1>©Yamuරවුමක් </h1>
+    </div> -->
+
+</div>
+</body>
+
+</html>

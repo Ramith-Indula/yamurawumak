@@ -1,0 +1,175 @@
+/*#region Back Button*/
+#backbuttonblock {
+    margin-top: 0.4em;
+}
+
+#backbuttonblock img {
+    display: block;
+    height: 2.2em;
+}
+/*#endregion Back Button*/
+
+/*#region Menu Button*/
+#menubuttonblock {
+    margin-top: 0.2em;
+    margin-left: 0.05em;
+}
+
+#menubuttonblock img {
+    height: 2.5em;
+}
+
+.menulistbuttonblock {
+    margin-top: 2.2em;
+    margin-left: 0.7em;
+}
+
+.menulistbutton {
+    width: 95%;
+}
+
+.menu-icon {
+    transform: rotate(0deg);
+    transition: transform 0.2s linear;
+}
+
+.menu-icon.open {
+    transform: rotate(90deg);
+    transition: transform 0.2s linear;
+}
+
+#menu {
+    background: #e9e9e9;
+    z-index: 5000;
+    padding: 0.7em;
+}
+/*#endregion Menu Button*/
+
+
+/* Menu Panel Styles */
+.menuheaderblock {
+    display: inline-block !important;
+    margin-top: 1em;
+    margin-left: 0.4em;
+}
+
+.menuheaderblock a:link, a:visited {
+    text-decoration: none !important;
+    font-family: 'avenir-light' !important;
+    color: #e0e0e0 !important;
+    text-shadow: none !important;
+}
+
+.ui-panel-inner {
+    background-color: #e9e9e9 !important;
+}
+
+#aboutus {
+    margin-left: 32% !important;
+}
+
+#aboutus a:link, a:visited {
+    text-decoration: none !important;
+    font-family: 'avenir-light' !important;
+    color: #a0a0a0 !important;
+    text-shadow: none !important;
+}
+
+/*#endregion Menu Styles*/
+
+/*Profile Image and Newsletter Styles*/
+.profileimageblock {
+    position: relative;
+    z-index: 3;
+}
+
+.profileimageblock img {
+    float: left;
+    width: 5.5em;
+    border-width: 0.3em !important;
+    border: 1em solid #424242;
+    border-radius: 5em;
+    -webkit-border-radius: 5em;
+    -moz-border-radius: 5em;
+    margin-left: 3em;
+}
+
+.profilenameblock {
+
+    margin-top: 1.6em;
+    float: left;
+    border-radius: 2px;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    width: auto;
+    z-index: 2;
+}
+
+.profilenameblock p {
+    margin: 1em 1em;
+}
+
+.newsletterimg {
+    float: right;
+    width: 20%;
+    margin-top: 1.2em;
+    margin-right: 0.3em;
+}
+
+
+/*-------------------------- iPhone /*--------------------------*/
+
+/* iPhone 6 - Portrait */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (orientation: portrait) {
+
+}
+
+/* iPhone 6 - Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (orientation: landscape) {
+
+}
+
+/*-------------------------- iPad /*--------------------------*/
+
+/* iPad - Landscape */
+@media only screen
+and (min-device-width: 768px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+    #menubuttonblock {
+        visibility: hidden;
+    }
+
+    #logoblock {
+        margin-right: 18em;
+        margin-top: 0.5%;
+    }
+
+    .menulistbuttonblock {
+        margin-top: 3em;
+        margin-left: 0.7em;
+    }
+
+    .ui-controlgroup-horizontal .ui-controlgroup-controls {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 19.5em !important;
+    }
+
+}
+
+/* iPad - Portrait */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait) {
+
+}

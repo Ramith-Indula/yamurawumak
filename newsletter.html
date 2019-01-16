@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <link rel="stylesheet" href="css/newsletter.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
+    <link rel="stylesheet" href="css/font-face.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+
+<body>
+
+<div data-role="page" id="my-trips-page" class="ui-responsive-panel">
+
+    
+    <div data-role="header" class="header" data-position="fixed">
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+            <div id="menubuttonblock">
+                <a href="#menu"><img id="menubutton" src="images/new_icons/_ionicons_svg_md-menu.png"/></a>
+            </div>
+        </div>
+        <div id="logoblock" align="center">
+            <table>
+                <tr>
+                    <td><img src="images/log21.png"/></td>
+                    <td>NEWS LETTER</td>
+                </tr>
+            </table>
+            <!--<div data-role="controlgroup" data-type="horizontal" class="ui-btn-right" data-mini="true">
+                <div id="backbuttonblock">
+                    <a href=""><img id="backbutton" src="images/buttons/icon-buttons/back_button.png"/></a>
+                </div>
+            </div>-->
+        </div>
+
+        <!-- <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right" data-mini="true">
+            <div id="backbuttonblock">
+                <a href=""><img id="backbutton" src="images/buttons/icon-buttons/back_button.png"/></a>
+            </div>
+        </div> -->
+    </div>
+
+    <!-- Slide Menu Panel -->
+    <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true" class="menupanel" style="overflow:auto; position: absolute;">
+        <script>$(function () {
+            $("#menu").load("menu.html");
+        });</script>
+    </div>
+
+    <div data-role="main" class="ui-content" id="content">
+
+        <div class="tripdetailblock">
+            <!--Tab Toggle Buttons-->
+            <div id="tabtoggle">
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="#upcomingtripstab" data-toggle="tab">Offers</a></li>
+                    <li><a href="#pasttripstab" data-toggle="tab">Events</a></li>
+                </ul>
+            </div>
+
+            <!--Tab Panes-->
+            <div class="tab-content" id="tabcontent">
+                <!--Tab Pane for Upcoming Trips-->
+                <div class="tab-pane active" id="upcomingtripstab">
+                    <div>
+                        <div class="favplace row list-group-item">
+                            <div class="col-md-3 col-lg-2 col-xs-4">
+                                <img src="images/newsletter/offers/treehouse.jpg" class="place-image">
+                            </div>
+                            <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
+                                <h4 class="favplace-header list-group-item-heading">Yala Safari Tree House</h4>
+                                <p class="favplace-desc list-group-item-text">The ultimate wildlife experience. This Yala Safari Package will lift you right to the top of the world.
+                                    from $175</p>
+                            </div>
+                            
+                        </div>
+                        <div class="favplace row list-group-item">
+                            <div class="col-md-3 col-lg-2 col-xs-4">
+                                <img src="images/newsletter/offers/kitesurf.jpg" class="place-image">
+                            </div>
+                            <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
+                                <h4 class="favplace-header list-group-item-heading">Kitesurf Beginners</h4>
+                                <p class="favplace-desc list-group-item-text">Located in Arugambay beach area. Open for all the ages who are interested in 
+                                    joins as kitesurfers</p>
+                            </div>
+                            
+                        </div>
+                        <div class="favplace row list-group-item">
+                            <div class="col-md-3 col-lg-2 col-xs-4">
+                                <img src="images/newsletter/offers/mirissa.jpg" class="place-image">
+                            </div>
+                            <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
+                                <h4 class="favplace-header list-group-item-heading">Mirissa whale watching</h4>
+                                <p class="favplace-desc list-group-item-text">25% off. Blue whales are the biggest animal live on the earth and Mirissa
+                                    is the one of most suitable spot to watch blue whales and other whales too.</p>
+                            </div>
+                           
+                        </div>
+                        <div class="favplace row list-group-item">
+                            <div class="col-md-3 col-lg-2 col-xs-4">
+                                <img src="images/newsletter/offers/marino.jpg" class="place-image">
+                            </div>
+                            <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
+                                <h4 class="favplace-header list-group-item-heading">MARINO BEACH</h4>
+                                <p class="favplace-desc list-group-item-text">Presented by SriLanka Armed Forces, Department of Culture and Sri Lanka
+                                    Youth Council. All the performances will take place on a
+                                    stage set up at the Court Yard of Independence Arcade to attract and entertain the visitors.</p>
+                            </div>
+                           
+                        </div>
+                        <div class="favplace row list-group-item">
+                            <div class="col-md-3 col-lg-2 col-xs-4">
+                                <img src="images/newsletter/offers/Knuckles.jpg" class="place-image">
+                            </div>
+                            <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
+                                <h4 class="favplace-header list-group-item-heading">KNUCKLES hike bound to Meemure</h4>
+                                <p class="favplace-desc list-group-item-text">FOC Travelling,food and stay.Located in the districts of Matale and Kandy
+                                    in the Central Province of Sri Lanka, the Knuckles Mountain Range.</p>
+                            </div>
+                           
+                        </div>
+                        <div class="favplace row list-group-item">
+                            <div class="col-md-3 col-lg-2 col-xs-4">
+                                <img src="images/newsletter/offers/beachcampingluxury.jpg" class="place-image">
+                            </div>
+                            <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
+                                <h4 class="favplace-header list-group-item-heading">Luxury Beach Camping</h4>
+                                <p class="favplace-desc list-group-item-text">Offering breathtaking views of the Indian Ocean, the camp boasts the largest luxury tents in Sri Lanka.
+                                    from $100/night.</p>
+                            </div>
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+                <!--Tab Pane for Past Trips-->
+                <div class="tab-pane" id="pasttripstab">
+                    <div>
+                        <div class="favplace row list-group-item">
+                            <div class="col-md-3 col-lg-2 col-xs-4">
+                                <img src="images/newsletter/events/kandyperehara.jpg" class="place-image">
+                            </div>
+                            <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
+                                <h4 class="favplace-header list-group-item-heading">Kandy Perahera</h4>
+                                <p class="favplace-desc list-group-item-text">Srilankans biggest cultural show and the biggest perehara for temple of tooth.
+                                    Mostly addressed as Asela Perehara.</p>
+                            </div>
+                            
+                        </div>
+                        <div class="favplace row list-group-item">
+                            <div class="col-md-3 col-lg-2 col-xs-4">
+                                <img src="images/newsletter/events/kitesurf.jpg" class="place-image">
+                            </div>
+                            <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
+                                <h4 class="favplace-header list-group-item-heading">Kitesurf Beginners</h4>
+                                <p class="favplace-desc list-group-item-text">Located in Arugambay beach area. Open for all the ages who are interested in 
+                                    joins as kitesurfers</p>
+                            </div>
+                            
+                        </div>
+                        <div class="favplace row list-group-item">
+                            <div class="col-md-3 col-lg-2 col-xs-4">
+                                <img src="images/newsletter/events/Oktoberfest.jpg" class="place-image">
+                            </div>
+                            <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
+                                <h4 class="favplace-header list-group-item-heading">Oktoberfest</h4>
+                                <p class="favplace-desc list-group-item-text">Biggest event of the Octomber known as the octoberfest. Food,Drinks Included.
+                                    Handled by Hot Chocolate Band.</p>
+                            </div>
+                           
+                        </div>
+                        <div class="favplace row list-group-item">
+                            <div class="col-md-3 col-lg-2 col-xs-4">
+                                <img src="images/newsletter/events/KandyCulturalShow.jpg" class="place-image">
+                            </div>
+                            <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
+                                <h4 class="favplace-header list-group-item-heading">Cultural Show</h4>
+                                <p class="favplace-desc list-group-item-text">Presented by Sri Lanka Armed Forces, Department of Culture and Sri Lanka
+                                    Youth Council. All the performances will take place on a
+                                    stage set up at the Court Yard of Independence Arcade to attract and entertain the visitors.</p>
+                            </div>
+                           
+                        </div>
+                        <div class="favplace row list-group-item">
+                            <div class="col-md-3 col-lg-2 col-xs-4">
+                                <img src="images/newsletter/events/teaExhibition.jpg" class="place-image">
+                            </div>
+                            <div class="col-md-9 col-lg-10 col-xs-8 favplace-content">
+                                <h4 class="favplace-header list-group-item-heading">Exhibition of Ceylon Tea</h4>
+                                <p class="favplace-desc list-group-item-text">Presented by Sri Lanka Tea Board.
+                                    A showcase all varieties of Sri Lankan tea including a tea tasting centre.</p>
+                            </div>
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="email-button-wrapper-back" onclick="history.back(-1)" >
+        
+            <img src="images/new_icons/back.png"/></a>
+    </div>
+
+</div>
+
+</body>
+
+</html>

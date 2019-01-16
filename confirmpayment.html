@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <link rel="stylesheet" href="css/confirmpayment.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
+    <link rel="stylesheet" href="css/font-face.css">
+</head>
+<body>
+
+<div data-role="page" id="confirmpayment" class="ui-responsive-panel">
+
+    <!--Header-->
+    <div data-role="header" class="header" data-position="fixed">
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+            <div id="menubuttonblock">
+                <a href="#menu"><img id="menubutton" src="images/new_icons/_ionicons_svg_md-menu.png"/></a>
+            </div>
+        </div>
+        <div id="logoblock" align="center">
+            <table>
+                <tr>
+                    <td><img src="images/log21.png"/></td>
+                    <td>Book a Trip</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- Slide Menu Panel -->
+    <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true"
+         class="menupanel">
+        <script>$(function(){$("#menu").load("menu.html");});</script>
+    </div>
+
+    <div data-role="main" class="ui-content" id="content">
+        <div id="paymentDetails">
+            <h1>
+                <b>Confirm Payment</b>
+            </h1>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" id="paymentblocka">
+                    <!--<label for="select-native-2">Currency:</label>-->
+                    <h3 >Currency : </h3>
+                    <h3 style="padding-top: 0.2em;">Ticket Charges : </h3>
+                    <h3  style="padding-top: 0.2em;">Tax(VAT) : </h3>
+                    <h3  style="padding-top: 0.2em;">Price Redemption : </h3>
+                    <h2>Grand Total : </h2>
+                </div>
+                <div class="ui-block-b" id="paymentblockb">
+                    <h3>
+                        <select name="select-native-2" id="select-native-2" data-mini="true">
+                            <option value="2">US Dollars (USD)</option>
+                        </select>
+                    </h3>
+                    <!--<label data-type="currency">3300</label>-->
+                    <!--<input type="text" id="number" pattern="[0-9]*">-->
+                    <h3 style="text-align: right">13.00</h3>
+                    <h3  style="text-align: right">1.50</h3>
+                    <h3  style="text-align: right">3.00</h3>
+                    <h2  style="text-align: right">11.50</h2>
+
+                </div>
+            </div>
+            <hr>
+            <div id="editbookingwrapper">
+                <a rel="external" href="bookingtripdetails.html" class="url-button btn btn-primary btn-xs ui-link" id="editBooking">Edit Booking</a>
+            </div>
+            <table border="0" cellpadding="10" cellspacing="0" align="center"><tr><td align="center"></td></tr><tr><td align="center">
+            <!--<a href="https://www.paypal.com/ph/webapps/mpp/paypal-popup" title="How PayPal Works" onclick="javascript:window.open('https://www.paypal.com/ph/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" /></a>-->
+
+        </td></tr>
+            <tr>
+                <td align="center">
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+                </td>
+            </tr>
+        </table><!-- PayPal Logo -->
+
+        </div>
+    </div>
+
+    
+
+</div>
+
+</body>
+</html>

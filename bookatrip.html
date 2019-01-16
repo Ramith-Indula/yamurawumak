@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/bookingpage.js"></script>
+    <link rel="stylesheet" href="css/bookatrip.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
+    <link rel="stylesheet" href="css/font-face.css">
+</head>
+<body>
+
+<div data-role="page" id="tripbookingpage" class="ui-responsive-panel">
+
+    <!--Header-->
+    <div data-role="header" class="header" data-position="fixed">
+        <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+            <div id="menubuttonblock">
+                <a href="#menu"><img id="menubutton" src="images/new_icons/_ionicons_svg_md-menu.png"/></a>
+            </div>
+        </div>
+        <div id="logoblock" align="center">
+            <table>
+                <tr>
+                    <td><img src="images/log21.png"/></td>
+                    <td>Book a Trip</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- Slide Menu Panel -->
+    <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true"
+         class="menupanel">
+        <script>$(function(){$("#menu").load("menu.html");});</script>
+    </div>
+
+    <div data-role="main" class="ui-content" id="content">
+
+        <div class="container">
+            <form class="train-booking-panel">
+                <div class="arrival-trip">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Trip details</h2>
+                        </div>
+                        <div class="col-md-12">
+                            <select name="select-menu-depStation" id="ddlDepStation">
+                                <option value="0">Departure Station</option>
+                                <option value="1">Maradana</option>
+                                <option value="2">Pettah</option>
+                                <option value="3">Nugegoda</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-3 col-md-3">
+                            <label>Seats</label>
+                            <input type="number" id="noOfSeats" data-corners="false" min="1">
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <label>Date</label>
+                            <input type="date" id="bookingDate" data-corners="false">
+                        </div>
+                        <div class="col-xs-3 col-sm-3 col-md-3">
+                            <label>Time</label>
+                            <input type="time" id="bookingTime" data-corners="false">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <select name="Rseat-type" id="ddlRSeatType" data-corners="false">
+                                <option value="0">Cabin Type</option>
+                                <option value="1">1st Class</option>
+                                <option value="2">2nd Class</option>
+                                <option value="3">3rd Class</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label>
+                                <input type="checkbox" name="windowSeat" id="cbRWindowSeat" > Request a window seat if available
+                            </label>
+                        </div>
+                        <div class="col-md-12">
+                            <label>
+                                <input type="checkbox" id="return-trip" for="return-trip"> Return Trip
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="return-trip">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2> Return Trip details</h2>
+                        </div>
+                        <div class="col-md-12">
+                            <select name="select-menu-depStation" id="rnStation">
+                                <option value="0">Departure Station</option>
+                                <option value="1">Maradana</option>
+                                <option value="2">Pettah</option>
+                                <option value="3">Nugegoda</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-3 col-md-3">
+                            <label>Seats</label>
+                            <input type="number" id="rnnoOfSeats" data-corners="false" min="1">
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6">
+                            <label>Date</label>
+                            <input type="date" id="rnbookingDate" data-corners="false">
+                        </div>
+                        <div class="col-xs-3 col-sm-3 col-md-3">
+                            <label>Time</label>
+                            <input type="time" id="rnbookingTime" data-corners="false">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <select name="Rseat-type" id="rnSeatType" data-corners="false">
+                                <option value="0">Cabin Type</option>
+                                <option value="1">1st Class</option>
+                                <option value="2">2nd Class</option>
+                                <option value="3">3rd Class</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-12">
+                            <label>
+                                <input type="checkbox" name="windowSeat" id="rnRWindowSeat" > Request a window seat if available
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div style="display: inline-block; width: 100%; padding-top: 5%">
+                <a rel="external" href="bookingtripdetails.html" class="url-button btn btn-primary" id="nextBtn">Next</a>
+                <!--<button type="submit" data-theme="c" id="nextBtn">Next</button>-->
+            </div>
+        </div>
+
+
+    </div>
+
+   
+
+</div>
+
+</body>
+</html>

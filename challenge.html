@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/puzzle.js"></script>
+    <link rel="stylesheet" href="css/challenge.css">
+    <link rel="stylesheet" href="css/slider-menu.css">
+    <link rel="stylesheet" href="css/font-face.css">
+    <link rel="stylesheet" href="css/puzzle.css">
+
+</head>
+
+<body>
+
+    <div data-role="page" id="templatepage" class="ui-responsive-panel">
+
+        <!--Header-->
+        <div data-role="header" class="header" data-position="fixed">
+            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-left" data-mini="true">
+                <div id="menubuttonblock">
+                    <a href="#menu"><img id="menubutton" src="images/buttons/icon-buttons/menu_button.png" /></a>
+                </div>
+            </div>
+            <div id="logoblock">
+                <img src="images/logos/header/letsplay_header_logo.png" />
+            </div>
+            <div data-role="controlgroup" data-type="horizontal" class="ui-btn-right" data-mini="true">
+                <div id="backbuttonblock">
+                    <a rel="external" href="placefacts.html"><img id="backbutton" src="images/buttons/icon-buttons/back_button.png" /></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide Menu Panel -->
+        <div data-role="panel" id="menu" data-position="left" data-display="push" data-position-fixed="true" class="menupanel">
+            <script>$(function () { $("#menu").load("menu.html"); });</script>
+</div>
+
+<div data-role="main" class="ui-content" id="content">
+    <!--Challenge page content-->
+    <div class="wrapper row">
+        <div class="row">
+            <div class="col-md-3 col-xs-6">
+                <h3>Shuffled!</h3>
+            </div>
+            <div class="col-md-4 col-md-offset-5 col-xs-6"><h3 id="movesHeader">Moves &nbsp<span id="noOfMoves"></span></h3></div>
+        </div>
+        <div class="row" id="canvas"></div>
+        <div class="row col-md-10 col-md-offset-1"><span class="glyphicon glyphicon-resize-vertical"></span><span class="gly-style glyphicon glyphicon-resize-horizontal"></span>Move pieces to re-assemble the original image</div>
+        <div class="row puzzle-desc">
+            <div class="col-md-6 col-xs-6">
+                <img class="puzzle-desc-image" src="images/places/gangaramaya/gangaramaya_thumbnail_01.png">
+            </div>
+            <div class="col-md-6 col-xs-6">
+                <div class="row"><img class="puzzle-desc-image" src="images/icons/100_coins.png"></div>
+                <div class="row"><p>A stunning capture of the Gangaramaya temple from the Beira lake side. Image source Flicker.com</p></div>                
+            </div>
+        </div>
+    </div>
+</div>
+
+ <div data-role="popup" id="startPopup" class="ui-content" data-overlay-theme="b" data-theme="b" data-position-to="#content">
+        <a href="#" data-rel="back"
+           class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+        <h3 style="text-align: center">It's not easy when it's shuffled!</h3>
+        <p style="text-align: center">Welcome to Gangaramaya temple picture shuffle challenge! <br>Remember those old school plastic-made picture puzzles? Let's try out one again! <br>What you have to do is simple. <br>Re-assemble the original picture by moving the pieces into the gap.</p>
+        <div class="start-popup-image"><img class="start-popup-image" src="images/icons/puzzle_sample.png"></div>
+        <div id="play-button-div">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" >Play and Win <img id="play-button-image" src="images/icons/100_coins.png"></a>
+        </div>
+</div>
+
+<!--Footer-->
+<div data-role="footer" data-position="fixed" class="footer">
+    <h1>©Railපාර 2016</h1>
+</div>
+
+</body>
+
+<script>
+    $(document).on('pageinit', '.ui-page',function(event){
+        setTimeout(function () {
+            $('#startPopup').popup('open');
+        }, 1000);
+    });
+</script>
+</html>
