@@ -7,7 +7,7 @@ railPaaraApp.controller('loginController', function ($scope, $http) {
 
     });
 
-    $scope.baseURL = "https://ramith-indula.github.io/yamurawumak/login.html";
+    $scope.baseURL = "https://ramith-indula.github.io/yamurawumak/";
 
     if (sessionStorage.getItem('user')) {
         window.location = 'home.html'
