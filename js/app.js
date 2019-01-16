@@ -1,6 +1,6 @@
 var railPaaraApp = angular.module('railPaaraApp', []);
 
-railPaaraApp.controller('loginController', function ($scope, $http) {
+/*railPaaraApp.controller('loginController', function ($scope, $http) {
 
     $(window).load(function(){
         $('#cover').fadeOut(1000);
@@ -24,14 +24,14 @@ railPaaraApp.controller('loginController', function ($scope, $http) {
 
         $http.post($scope.baseURL + 'home.html', body)
             .then(function (res) {
-               /* if (!res.data.error) {
+               /!* if (!res.data.error) {
                     console.log(res.data);
                     sessionStorage.setItem("user", res.data);
                     window.location = 'home.html';
                 }
-                else {*/
-                    /*console.log(res.data);
-                    $scope.login_error = res.data.error;*/
+                else {*!/
+                    /!*console.log(res.data);
+                    $scope.login_error = res.data.error;*!/
                     console.log(res.data);
                     //sessionStorage.setItem("user", res.data);
                     window.location = 'home.html';
@@ -40,7 +40,7 @@ railPaaraApp.controller('loginController', function ($scope, $http) {
                 console.log(res);
             });
     };
-});
+});*/
 
 railPaaraApp.controller('registerController', function ($scope, $http) {
 
