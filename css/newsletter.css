@@ -358,6 +358,18 @@ and (min-device-width: 768px)
 and (max-device-width: 1024px)
 and (orientation: portrait) {
 
+    .favplace-content{
+
+        font-size: 22px ;
+
+    }
+
+    .list-group-item-heading{
+        font-size: 18px;
+    }
+    .col-xs-4 {
+       width: 105px !important;
+    }
     .trip {
         box-shadow: 3px 5px 10px #888888;
         background-color: #f9f9f9;
@@ -373,14 +385,14 @@ and (orientation: portrait) {
         z-index: 1100;
         bottom: 0;
         right: 0;
-    
+
     }
-    
+
     .email-button-wrapper-back img {
         width: 3em;
-        box-shadow: 3px 5px 10px #888888;
+        box-shadow: none !important;
         border-radius: 1em;
-        margin-right: 40em;
+        margin-right: 45em;
         display: block;
         margin-bottom: 4em;
         float: right;
